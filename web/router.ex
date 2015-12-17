@@ -14,13 +14,9 @@ defmodule Blog.Router do
   end
 
   scope "/", Blog do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
+    resources "/posts", PostController
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", Blog do
-  #   pipe_through :api
-  # end
 end
