@@ -18,9 +18,15 @@ defmodule Blog.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Blog, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex]]
+     applications: app_list(Mix.env)]
   end
+
+  def app_list do
+    [:phoenix, :phoenix_html, :cowboy, :logger, :phoenix_ecto, :postgrex]
+  end
+
+  def app_list(:test), do: [:hound | app_list]
+  def app_list(_), do: app_list
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
