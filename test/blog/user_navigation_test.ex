@@ -1,4 +1,5 @@
 defmodule Blog.UserNavigationTest do
+  # use Blog.ConnCase
   use ExUnit.Case
   use Hound.Helpers
 
