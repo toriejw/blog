@@ -1,1 +1,38 @@
-<h1>Torie Joy-Warren</h1>
+<div class = "page home">
+
+  <div class = "title-home">
+    <h1><a href="/">Torie Joy-Warren</a></h1>
+      <div class = "home-nav-list">
+        <a href="/#about">about</a> |
+        <a href="/#contact">contact</a> |
+        <a href="/blog">blog</a>
+      </div>
+  </div>
+
+  <img class = "bg-image" src= "/images/bg_image.png" alt= "computer chip design by Nanami Tajika">
+</div>
+
+<a name = "about" class ="page-anchor"></a>
+  <div class = "page about">
+    <h2>about</h2>
+      <div class ="about-wrapper">
+        <img class = "torie-photo" src = "/images/torie.jpg" alt = "photo of Torie">
+        <p>I'm Torie -- a software development student currently studying at the <a href="http://www.turing.io">Turing School of Software and Design</a> in Denver, Colorado. I was born in Arlington, Virginia, but have lived most of my life in the beautiful and freezing country of Canada. I have a BScH in Economics, and worked briefly in the field before deciding programming was for me. I love playing squash and watching baseball and soccer. My day is not complete without reading a few pages of a non-fiction book.</p>
+      </div>
+  </div>
+
+<a name = "contact" class ="page-anchor"></a>
+  <div class = "page contact">
+    <h2>contact</h2>
+      <p>E-mail me at victoria.joywarren@gmail.com.</p>
+      <br>
+      <p class = "p-two">Or find me online:</p>
+      <div>
+        <a href="https://github.com/toriejw">GitHub</a>
+        <br>
+        <a href="https://twitter.com/torie_jw">Twitter</a>
+        <br>
+        <a href="https://ca.linkedin.com/pub/victoria-joy-warren/7b/510/34">LinkedIn</a>
+      </div>
+      <p class = "p-two">I'd love to chat with you!</p>
+  </div>

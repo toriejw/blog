@@ -7,22 +7,39 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Torie Joy-Warren - Blog</title>
+    <title>Torie Joy-Warren</title>
     <link rel="icon"
           type="image/icon"
-          href="/static/assets/images/favicon-code.ico">
+          href="/images/favicon-code.ico">
+
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
-    <div class="container" role="main">
+    <nav>
+      <ul class="main-menu">
+        <li><a href="/" data-hover=" home">
+          <img class="nav-icon-house" src= "/images/house-icon.png" alt= "house icon">
+        </a></li>
+        <li><a href="/#about" data-hover=" about">
+          <img class="nav-icon-circle" src= "/images/circle-icon.png" alt= "circle icon">
+        </a></li>
+        <li><a href="/#contact" data-hover=" contact">
+          <img class="nav-icon-circle" src= "/images/circle-icon.png" alt= "circle icon">
+        </a></li>
+        <li><a href="/blog" data-hover=" blog">
+          <img class="nav-icon-circle" src= "/images/circle-icon.png" alt= "circle icon">
+        </a></li>
+       </ul>
+    </nav>
 
+    <div class="container" role="main">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-      <%= @inner %>
-
     </div>
+
+    <%= @inner %>
+
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
