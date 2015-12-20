@@ -209,10 +209,13 @@ ul {
 }
 
 .nav-icon-house {
-  width: 15px;
+  width: 13px;
 }
-
 
 .nav-icon-circle {
   width: 10px;
+}
+
+nav li {
+  width: 30px;
 }

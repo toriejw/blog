@@ -17,6 +17,7 @@ defmodule Blog.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/admin", SessionsController, :new
     resources "/posts", PostController
   end
 end

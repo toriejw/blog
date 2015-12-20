@@ -18,7 +18,7 @@
   <body>
     <nav>
       <ul class="main-menu">
-        <li><a href="/" data-hover=" home">
+        <li><a href="/" data-hover="home">
           <img class="nav-icon-house" src= "/images/house-icon.png" alt= "house icon">
         </a></li>
         <li><a href="/#about" data-hover=" about">
