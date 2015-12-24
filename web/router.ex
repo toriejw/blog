@@ -19,5 +19,6 @@ defmodule Blog.Router do
     get "/", PageController, :home
     get "/admin", SessionsController, :new
     resources "/posts", PostController
+    post "/admin", SessionsController, :create
   end
 end

@@ -1,13 +1,27 @@
 <div class="containter">
-  <form>
-    <label>Name</label>
-    <input type="text" name="name" value="">
-    <br>
+  <%= form_for @changeset, sessions_path(@conn, :create), fn f -> %>
+    <%= if f.errors != [] do %>
+      <div class="alert alert-danger">
+        <ul>
+          <%= for {attr, message} <- f.errors do %>
+            <li><%= humanize(attr) %> <%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-    <label>Password</label>
-    <input type="text" name="password" value="">
-    <br>
+    <div class="form-group">
+      <label>Username</label>
+      <%= text_input f, :username, class: "form-control" %>
+    </div>
 
-    <input type="submit" value="Submit">
-  </form>
+    <div class="form-group">
+      <label>Password</label>
+      <%= password_input f, :password, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= submit "Submit", class: "btn btn-primary" %>
+    </div>
+  <% end %>
 </div>
