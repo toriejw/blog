@@ -3,8 +3,8 @@ defmodule Blog.Repo.Migrations.CreateUser do
 
   def change do
     create table(:users) do
-      add :name, :string
-      add :password, :string
+      add :username, :string
+      add :crypted_password, :string
 
       timestamps
     end

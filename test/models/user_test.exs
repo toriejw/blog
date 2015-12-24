@@ -3,7 +3,7 @@ defmodule Blog.UserTest do
 
   alias Blog.User
 
-  @valid_attrs %{name: "some content", password: "some content"}
+  @valid_attrs %{crypted_password: "some content", username: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

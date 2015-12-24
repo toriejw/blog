@@ -2,13 +2,13 @@ defmodule Blog.User do
   use Blog.Web, :model
 
   schema "users" do
-    field :name, :string
-    field :password, :string
+    field :username, :string
+    field :crypted_password, :string
 
     timestamps
   end
 
-  @required_fields ~w(name password)
+  @required_fields ~w(username crypted_password)
   @optional_fields ~w()
 
   @doc """
