@@ -1,5 +1,15 @@
-<div class="containter">
-  <%= form_for @changeset, sessions_path(@conn, :create), fn f -> %>
+<h1 class="text-center">Admin Login</h1>
+
+<br>
+<br>
+<br>
+
+
+<div class="col-md-5">
+</div>
+
+<div class="col-md-2">
+    <%= form_for @changeset, sessions_path(@conn, :create), fn f -> %>
     <%= if f.errors != [] do %>
       <div class="alert alert-danger">
         <ul>
