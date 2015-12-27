@@ -12,7 +12,7 @@ defmodule Blog.SessionsController do
     case Blog.Session.login(session_params, Blog.Repo) do
       {:ok, user} ->
         conn
-        |> put_session(:current_user, user.id)
+        |> put_session(:user_id, user.id)
         |> put_flash(:info, "Logged in")
         |> redirect(to: "/dashboard")
       :error ->

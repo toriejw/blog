@@ -48,6 +48,7 @@ defmodule Blog.Web do
       use Phoenix.HTML
 
       import Blog.Router.Helpers
+      import Blog.Session, only: [current_admin: 1, logged_in?: 1]
     end
   end
 
