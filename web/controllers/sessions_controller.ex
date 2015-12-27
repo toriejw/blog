@@ -8,7 +8,17 @@ defmodule Blog.SessionsController do
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, _params) do
-    
+  def create(conn, %{"session" => session_params}) do
+    case Blog.Session.login(session_params, Blog.Repo) do
+      {:ok, user} ->
+        conn
+        |> put_session(:current_user, user.id)
+        |> put_flash(:info, "Logged in")
+        |> redirect(to: "/dashboard")
+      :error ->
+        conn
+        |> put_flash(:info, "It doesn't look like you're authorized for this.")
+        |> render("new.html")
+    end
   end
 end

@@ -1,5 +1,8 @@
 defmodule Blog.User do
   use Blog.Web, :model
+  use Ecto.Model.Callbacks
+
+  alias Blog.User
 
   schema "users" do
     field :username, :string
