@@ -5,6 +5,11 @@ defmodule Blog.PostController do
 
   plug :scrub_params, "post" when action in [:create, :update]
 
+  def blog(conn, _params) do
+    posts = Repo.all(Post)
+    render(conn, "blog.html", posts: posts)
+  end
+
   def index(conn, _params) do
     posts = Repo.all(Post)
     render(conn, "index.html", posts: posts)

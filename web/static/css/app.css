@@ -219,3 +219,7 @@ ul {
 nav li {
   width: 30px;
 }
+
+post-title {
+  size: 130%;
+}

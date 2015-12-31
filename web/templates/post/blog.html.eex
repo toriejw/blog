@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Blog</h1>
+
+  <%= for post <- @posts do %>
+    <div class="post-title">
+      <%= post.title %>
+      <br>
+      <br>
+      <%= post.body %>
+    </div>
+  <% end %>
+</div>
