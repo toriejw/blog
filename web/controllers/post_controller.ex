@@ -1,8 +1,9 @@
 defmodule Blog.PostController do
   use Blog.Web, :controller
+  # use Calecto.Model, usec: true
 
   alias Blog.Post
-  import Ecto.Changeset, only: [put_change: 3]
+  # import Ecto.Changeset, only: [put_change: 3]
 
   plug :scrub_params, "post" when action in [:create, :update]
 
@@ -27,10 +28,7 @@ defmodule Blog.PostController do
 
     case Repo.insert(changeset) do
       {:ok, _post} ->
-        post = Repo.get_by!(Post, title: changeset.params["title"])
-
-        Post.changeset(post)
-        |> put_change(:inserted_at, Calendar.Strftime.strftime!(post.inserted_at, "%e %B %Y"))
+        # change_date_to_calendar(changeset)
 
         conn
         |> put_flash(:info, "Post created successfully.")
@@ -77,7 +75,13 @@ defmodule Blog.PostController do
     |> redirect(to: post_path(conn, :index))
   end
 
-  defp change_date_to_calendar do
-
-  end
+  # defp change_date_to_calendar(changeset) do
+  #   post = Repo.get_by!(Post, title: changeset.params["title"])
+  #
+  #   inserted_at = Calecto.Date(Ecto.DateTime.to_erl(post.inserted_at))
+  #   # |> Calendar.Date
+  #
+  #   Post.changeset(post)
+  #   |> put_change(:inserted_at, inserted_at)
+  # end
 end

@@ -1,5 +1,6 @@
 defmodule Blog.Post do
   use Blog.Web, :model
+  use Calecto.Model, usec: true
 
   schema "posts" do
     field :title, :string
