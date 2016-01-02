@@ -22,7 +22,7 @@ defmodule Blog.Mixfile do
   end
 
   def app_list do
-    [:phoenix, :phoenix_html, :cowboy, :logger, :phoenix_ecto, :postgrex]
+    [:phoenix, :phoenix_html, :cowboy, :logger, :phoenix_ecto, :postgrex, :calecto]
   end
 
   def app_list(:test), do: [:hound | app_list]
@@ -44,7 +44,8 @@ defmodule Blog.Mixfile do
      {:cowboy, "~> 1.0"},
      {:comeonin, "~> 1.0"},
      {:hound, "~> 0.7.4"},
-     {:earmark, "~> 0.2.0"}]
+     {:earmark, "~> 0.2.0"},
+     {:calecto, "~> 0.4.3"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

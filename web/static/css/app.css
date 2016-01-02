@@ -147,13 +147,17 @@ h2, h3, p {
   background: transparent;
 }
 
+p {
+  text-align: left;
+}
+
 h2 {
 	padding-top: 60px;
 	margin-bottom: 5%;
   font-size: 200%;
 }
 
-p {
+.about-paragraph {
 	margin: 10% 10% 0 10%;
 	font-size: 107%;
 }
@@ -220,6 +224,12 @@ nav li {
   width: 30px;
 }
 
-post-title {
+.blog-title {
+  margin: 5%;
+  margin-bottom: 0px;
+}
+
+.post-title {
   size: 130%;
+  margin: 1px;
 }

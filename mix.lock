@@ -1,4 +1,6 @@
-%{"certifi": {:hex, :certifi, "0.3.0"},
+%{"calecto": {:hex, :calecto, "0.4.3"},
+  "calendar": {:hex, :calendar, "0.12.1"},
+  "certifi": {:hex, :certifi, "0.3.0"},
   "comeonin": {:hex, :comeonin, "1.6.0"},
   "cowboy": {:hex, :cowboy, "1.0.4"},
   "cowlib": {:hex, :cowlib, "1.0.2"},
@@ -20,4 +22,5 @@
   "poolboy": {:hex, :poolboy, "1.5.1"},
   "postgrex": {:hex, :postgrex, "0.9.1"},
   "ranch": {:hex, :ranch, "1.2.0"},
-  "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"}}
+  "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"},
+  "tzdata": {:hex, :tzdata, "0.5.6"}}

@@ -2,6 +2,7 @@ defmodule Blog.PostController do
   use Blog.Web, :controller
 
   alias Blog.Post
+  import Ecto.Changeset, only: [put_change: 3]
 
   plug :scrub_params, "post" when action in [:create, :update]
 
@@ -22,9 +23,15 @@ defmodule Blog.PostController do
 
   def create(conn, %{"post" => post_params}) do
     changeset = Post.changeset(%Post{}, post_params)
+    # |> put_change(:updated_at, )
 
     case Repo.insert(changeset) do
       {:ok, _post} ->
+        post = Repo.get_by!(Post, title: changeset.params["title"])
+
+        Post.changeset(post)
+        |> put_change(:inserted_at, Calendar.Strftime.strftime!(post.inserted_at, "%e %B %Y"))
+
         conn
         |> put_flash(:info, "Post created successfully.")
         |> redirect(to: post_path(conn, :index))
@@ -68,5 +75,9 @@ defmodule Blog.PostController do
     conn
     |> put_flash(:info, "Post deleted successfully.")
     |> redirect(to: post_path(conn, :index))
+  end
+
+  defp change_date_to_calendar do
+
   end
 end
