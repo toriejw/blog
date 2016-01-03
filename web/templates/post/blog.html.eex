@@ -5,7 +5,9 @@
       <h2 class="post-title">
         <%= post.title %>
       </h2>
+      <br>
       <%= raw Calendar.Strftime.strftime!(post.inserted_at, "%e %B %Y") %>
+      <br>
       <br>
       <br>
       <%= raw Earmark.to_html(post.body) %>
