@@ -112,7 +112,7 @@ h1 a, h1 a:hover, .home-nav-list a, .social_links, .main-menu a, .main-menu a:ho
 }
 
 a {
-	color: blue;
+	color: #0064cf;
   background: transparent;
 }
 
@@ -160,6 +160,11 @@ h2 {
 .about-paragraph {
 	margin: 10% 10% 0 10%;
 	font-size: 107%;
+}
+
+.contact-paragraph {
+  text-align: center;
+  font-size: 110%;
 }
 
 .page {

@@ -24,15 +24,14 @@
 <a name = "contact" class ="page-anchor"></a>
   <div class = "page contact">
     <h2>contact</h2>
-      <p>E-mail me at victoria.joywarren@gmail.com.</p>
-      <br>
-      <p class = "p-two">Or find me online:</p>
-      <div>
-        <a href="https://github.com/toriejw">GitHub</a>
-        <br>
-        <a href="https://twitter.com/torie_jw">Twitter</a>
-        <br>
-        <a href="https://ca.linkedin.com/pub/victoria-joy-warren/7b/510/34">LinkedIn</a>
-      </div>
-      <p class = "p-two">I'd love to chat with you!</p>
+    <br>
+    <br>
+    <p class="contact-paragraph">E-mail me at victoria.joywarren@gmail.com.</p>
+    <br>
+    <p class="contact-paragraph" class = "p-two">Or find me online:</p>
+    <div>
+      <a href="https://github.com/toriejw">GitHub</a> //
+      <a href="https://twitter.com/torie_jw">Twitter</a> //
+      <a href="https://ca.linkedin.com/pub/victoria-joy-warren/7b/510/34">LinkedIn</a>
+    </div>
   </div>
